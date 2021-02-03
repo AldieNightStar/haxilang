@@ -10,7 +10,7 @@ func TestFunctionerCall(t *testing.T) {
 	f := NewFunctioner(e)
 
 	f.Append("/set a /x")
-	f.Append("/return /get a")
+	f.Append("/out /get a")
 
 	e.SetCommand("fnc", f.GetFunction())
 
@@ -28,7 +28,7 @@ func TestFunctionerFunctionCreation(t *testing.T) {
 /+ /set a /argn 1
 /+ /set b /argn 2
 /+ /super /set c 3
-/+ /return /math $a + $b
+/+ /out /math $a + $b
 /endfunc
 
 /set x /add 1 55`
